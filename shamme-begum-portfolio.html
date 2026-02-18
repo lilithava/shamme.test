@@ -1,0 +1,1140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO Meta Tags -->
+  <title>Shamme Begum | Accounting Student & Aspiring Financial Professional</title>
+  <meta name="description" content="Shamme Begum is a Wayne State University accounting student with a 3.7 GPA, Dean's List recognition, and hands-on experience in warehouse operations and community leadership." />
+  <meta name="keywords" content="Shamme Begum, accounting intern, Wayne State University, Detroit, financial analyst, business administration, Mike Ilitch School of Business" />
+  <meta name="author" content="Shamme Begum" />
+
+  <!-- Open Graph for social sharing -->
+  <meta property="og:title" content="Shamme Begum | Accounting & Finance Portfolio" />
+  <meta property="og:description" content="Aspiring accounting professional at Wayne State University. Dean's List | 3.7 GPA | Bilingual in English and Bangla." />
+  <meta property="og:type" content="website" />
+
+  <!-- Google Fonts: Playfair Display + DM Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ─── CSS VARIABLES ─── */
+    :root {
+      --navy:   #0d1f3c;
+      --gold:   #c9a84c;
+      --gold-lt:#f0d88a;
+      --cream:  #faf8f3;
+      --warm:   #f4f0e6;
+      --muted:  #6b7280;
+      --border: #e2d9c8;
+      --text:   #1a1a2e;
+      --white:  #ffffff;
+
+      --serif: 'Playfair Display', Georgia, serif;
+      --sans:  'DM Sans', system-ui, sans-serif;
+
+      --section-gap: 6rem;
+      --radius: 4px;
+      --shadow: 0 4px 24px rgba(13,31,60,.08);
+    }
+
+    /* ─── RESET & BASE ─── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; font-size: 16px; }
+
+    body {
+      font-family: var(--sans);
+      background: var(--cream);
+      color: var(--text);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: var(--gold); text-decoration: none; transition: color .2s; }
+    a:hover { color: var(--navy); text-decoration: underline; }
+
+    img { max-width: 100%; display: block; }
+
+    /* ─── NAVIGATION ─── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(13,31,60,.96);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(201,168,76,.25);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: .85rem 3rem;
+    }
+
+    .nav-logo {
+      font-family: var(--serif);
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--gold);
+      letter-spacing: .03em;
+    }
+
+    .nav-links {
+      display: flex; gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: rgba(255,255,255,.75);
+      font-size: .85rem;
+      font-weight: 500;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      transition: color .2s;
+    }
+
+    .nav-links a:hover { color: var(--gold); text-decoration: none; }
+
+    /* ─── HERO ─── */
+    .hero {
+      min-height: 100vh;
+      background: var(--navy);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* decorative grid lines */
+    .hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background-image:
+        linear-gradient(rgba(201,168,76,.07) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(201,168,76,.07) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+
+    /* gold accent bar */
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 5px; height: 100%;
+      background: linear-gradient(to bottom, var(--gold), #8b6914);
+    }
+
+    .hero-content {
+      padding: 8rem 4rem 6rem 6rem;
+      position: relative; z-index: 2;
+      animation: fadeUp .9s ease both;
+    }
+
+    .hero-eyebrow {
+      font-size: .78rem;
+      font-weight: 600;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.25rem;
+    }
+
+    .hero-name {
+      font-family: var(--serif);
+      font-size: clamp(2.8rem, 5vw, 4.2rem);
+      line-height: 1.1;
+      color: var(--white);
+      margin-bottom: 1.2rem;
+    }
+
+    .hero-name em {
+      font-style: italic;
+      color: var(--gold-lt);
+    }
+
+    .hero-tagline {
+      font-size: 1.1rem;
+      color: rgba(255,255,255,.65);
+      max-width: 28rem;
+      font-weight: 300;
+      margin-bottom: 2.5rem;
+    }
+
+    .hero-cta {
+      display: inline-flex; gap: 1rem; flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: .75rem 1.75rem;
+      font-family: var(--sans);
+      font-size: .85rem;
+      font-weight: 600;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      border-radius: var(--radius);
+      transition: all .2s;
+    }
+
+    .btn-gold {
+      background: var(--gold);
+      color: var(--navy);
+    }
+
+    .btn-gold:hover {
+      background: var(--gold-lt);
+      color: var(--navy);
+      text-decoration: none;
+      transform: translateY(-1px);
+    }
+
+    .btn-outline {
+      border: 1.5px solid rgba(255,255,255,.35);
+      color: rgba(255,255,255,.8);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--gold);
+      color: var(--gold);
+      text-decoration: none;
+    }
+
+    .hero-panel {
+      padding: 8rem 5rem 6rem 3rem;
+      position: relative; z-index: 2;
+      animation: fadeUp .9s .15s ease both;
+    }
+
+    .stats-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem;
+    }
+
+    .stat-card {
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(201,168,76,.2);
+      border-radius: 8px;
+      padding: 1.5rem 1.25rem;
+      transition: background .25s, transform .25s;
+    }
+
+    .stat-card:hover {
+      background: rgba(201,168,76,.1);
+      transform: translateY(-2px);
+    }
+
+    .stat-number {
+      font-family: var(--serif);
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: var(--gold);
+      line-height: 1;
+      margin-bottom: .3rem;
+    }
+
+    .stat-label {
+      font-size: .78rem;
+      font-weight: 500;
+      color: rgba(255,255,255,.55);
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
+
+    .hero-contact {
+      margin-top: 2rem;
+      display: flex; flex-direction: column; gap: .5rem;
+    }
+
+    .hero-contact-item {
+      font-size: .875rem;
+      color: rgba(255,255,255,.55);
+      display: flex; align-items: center; gap: .6rem;
+    }
+
+    .hero-contact-item a { color: rgba(255,255,255,.75); }
+    .hero-contact-item a:hover { color: var(--gold); text-decoration: none; }
+
+    .contact-icon {
+      width: 1.1em; text-align: center;
+      font-style: normal;
+    }
+
+    /* ─── LAYOUT ─── */
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    section {
+      padding: var(--section-gap) 0;
+    }
+
+    section:nth-child(even) { background: var(--warm); }
+
+    /* ─── SECTION HEADERS ─── */
+    .section-label {
+      font-size: .75rem;
+      font-weight: 600;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: .75rem;
+    }
+
+    .section-title {
+      font-family: var(--serif);
+      font-size: 2.25rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 1rem;
+    }
+
+    .section-rule {
+      width: 3.5rem; height: 3px;
+      background: var(--gold);
+      margin-bottom: 2.5rem;
+    }
+
+    /* ─── ABOUT ─── */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: start;
+    }
+
+    .about-body p {
+      color: var(--muted);
+      margin-bottom: 1.1rem;
+      font-size: 1.025rem;
+    }
+
+    .highlight-box {
+      background: var(--navy);
+      color: var(--white);
+      border-radius: 10px;
+      padding: 2rem;
+      margin-top: 1.5rem;
+      border-left: 4px solid var(--gold);
+    }
+
+    .highlight-box h4 {
+      font-family: var(--serif);
+      font-size: 1.1rem;
+      margin-bottom: .6rem;
+      color: var(--gold-lt);
+    }
+
+    .highlight-box p {
+      font-size: .9rem;
+      color: rgba(255,255,255,.65);
+      margin: 0;
+    }
+
+    .lang-badges {
+      display: flex; flex-wrap: wrap; gap: .5rem;
+      margin-top: 1rem;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: .35rem .9rem;
+      border-radius: 999px;
+      font-size: .78rem;
+      font-weight: 600;
+      letter-spacing: .04em;
+    }
+
+    .badge-navy { background: var(--navy); color: var(--gold); }
+    .badge-gold { background: var(--gold); color: var(--navy); }
+    .badge-outline { border: 1.5px solid var(--border); color: var(--muted); }
+
+    /* ─── EDUCATION ─── */
+    .edu-card {
+      background: var(--white);
+      border-radius: 10px;
+      padding: 2.5rem;
+      box-shadow: var(--shadow);
+      border-top: 4px solid var(--gold);
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 1rem;
+    }
+
+    .edu-institution {
+      font-family: var(--serif);
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: .25rem;
+    }
+
+    .edu-degree {
+      font-size: 1rem;
+      color: var(--muted);
+      margin-bottom: 1.25rem;
+    }
+
+    .edu-awards {
+      display: flex; flex-wrap: wrap; gap: .5rem;
+    }
+
+    .edu-gpa {
+      text-align: right;
+    }
+
+    .gpa-number {
+      font-family: var(--serif);
+      font-size: 3rem;
+      font-weight: 700;
+      color: var(--gold);
+      line-height: 1;
+    }
+
+    .gpa-label {
+      font-size: .75rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: .08em;
+    }
+
+    /* ─── SKILLS ─── */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    .skill-card {
+      background: var(--white);
+      border-radius: 10px;
+      padding: 1.75rem;
+      box-shadow: var(--shadow);
+      border-bottom: 3px solid transparent;
+      transition: border-color .25s, transform .25s;
+    }
+
+    .skill-card:hover {
+      border-bottom-color: var(--gold);
+      transform: translateY(-3px);
+    }
+
+    .skill-icon {
+      font-size: 1.75rem;
+      margin-bottom: .75rem;
+    }
+
+    .skill-name {
+      font-family: var(--serif);
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: .5rem;
+    }
+
+    .skill-desc {
+      font-size: .875rem;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+
+    /* ─── EXPERIENCE TIMELINE ─── */
+    .timeline {
+      position: relative;
+      padding-left: 2.5rem;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: .6rem; top: 0; bottom: 0;
+      width: 2px;
+      background: linear-gradient(to bottom, var(--gold), var(--border));
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 3rem;
+      animation: fadeUp .6s ease both;
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -2.1rem; top: .45rem;
+      width: 12px; height: 12px;
+      border-radius: 50%;
+      background: var(--gold);
+      border: 2px solid var(--cream);
+      box-shadow: 0 0 0 3px var(--gold);
+    }
+
+    .timeline-card {
+      background: var(--white);
+      border-radius: 10px;
+      padding: 1.75rem 2rem;
+      box-shadow: var(--shadow);
+    }
+
+    .timeline-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: .75rem;
+      gap: 1rem;
+    }
+
+    .timeline-role {
+      font-family: var(--serif);
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--navy);
+    }
+
+    .timeline-org {
+      font-size: .9rem;
+      color: var(--gold);
+      font-weight: 500;
+      margin-top: .1rem;
+    }
+
+    .timeline-date {
+      font-size: .78rem;
+      color: var(--muted);
+      background: var(--warm);
+      padding: .3rem .75rem;
+      border-radius: 999px;
+      white-space: nowrap;
+      font-weight: 500;
+    }
+
+    .timeline-bullets {
+      margin-top: .75rem;
+      padding-left: 1.1rem;
+    }
+
+    .timeline-bullets li {
+      font-size: .925rem;
+      color: var(--muted);
+      margin-bottom: .45rem;
+      line-height: 1.55;
+    }
+
+    /* ─── HONORS ─── */
+    .honors-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.25rem;
+    }
+
+    .honor-card {
+      background: var(--white);
+      border-radius: 10px;
+      padding: 1.5rem;
+      box-shadow: var(--shadow);
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+      transition: transform .2s;
+    }
+
+    .honor-card:hover { transform: translateY(-2px); }
+
+    .honor-medal {
+      font-size: 1.75rem;
+      flex-shrink: 0;
+    }
+
+    .honor-title {
+      font-family: var(--serif);
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: .25rem;
+    }
+
+    .honor-body {
+      font-size: .855rem;
+      color: var(--muted);
+    }
+
+    /* ─── FOOTER ─── */
+    footer {
+      background: var(--navy);
+      color: rgba(255,255,255,.5);
+      text-align: center;
+      padding: 2.5rem 2rem;
+      font-size: .85rem;
+    }
+
+    footer a { color: var(--gold); }
+
+    /* ─── ANIMATIONS ─── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(22px); }
+      to   { opacity: 1; transform: translateY(0);    }
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity .65s ease, transform .65s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ─── DIVIDER ─── */
+    .gold-divider {
+      width: 100%; height: 1px;
+      background: linear-gradient(to right, transparent, var(--gold), transparent);
+      margin: 0;
+    }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 900px) {
+      nav { padding: .85rem 1.5rem; }
+      .nav-links { gap: 1.2rem; }
+
+      .hero {
+        grid-template-columns: 1fr;
+        min-height: auto;
+      }
+
+      .hero-content {
+        padding: 6rem 2rem 2rem 2.5rem;
+      }
+
+      .hero-panel {
+        padding: 2rem 2.5rem 4rem;
+      }
+
+      .about-grid,
+      .skills-grid { grid-template-columns: 1fr; }
+
+      .honors-grid { grid-template-columns: 1fr; }
+
+      .edu-card { grid-template-columns: 1fr; }
+      .edu-gpa { text-align: left; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══ NAVIGATION ═══ -->
+  <nav aria-label="Main navigation">
+    <span class="nav-logo">Shamme Begum</span>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#honors">Honors</a></li>
+      <li><a href="mailto:hw2160@wayne.edu" class="btn btn-gold" style="padding:.45rem 1rem;font-size:.78rem;">Contact</a></li>
+    </ul>
+  </nav>
+
+
+  <!-- ═══ HERO ═══ -->
+  <header class="hero" id="top">
+    <div class="hero-content">
+      <p class="hero-eyebrow">Accounting &amp; Business Portfolio</p>
+      <h1 class="hero-name">Shamme<br /><em>Begum</em></h1>
+      <p class="hero-tagline">
+        An emerging accounting professional combining analytical rigor,
+        operational precision, and community leadership — rooted in Detroit,
+        driven by data.
+      </p>
+      <div class="hero-cta">
+        <a href="#experience" class="btn btn-gold">View Experience</a>
+        <a href="#education" class="btn btn-outline">Education &amp; Awards</a>
+      </div>
+
+      <div class="hero-contact" style="margin-top:2.5rem;">
+        <div class="hero-contact-item">
+          <i class="contact-icon">✉</i>
+          <a href="mailto:hw2160@wayne.edu">hw2160@wayne.edu</a>
+        </div>
+        <div class="hero-contact-item">
+          <i class="contact-icon">📍</i> Detroit, MI 48201
+        </div>
+        <div class="hero-contact-item">
+          <i class="contact-icon">📞</i>
+          <a href="tel:+13134197960">(313) 419-7960</a>
+        </div>
+        <div class="hero-contact-item">
+          <i class="contact-icon">🔗</i>
+          <a href="https://linkedin.com/in/shamme-begum-86591829b" target="_blank" rel="noopener">
+            linkedin.com/in/shamme-begum-86591829b
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-panel">
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-number">3.7</div>
+          <div class="stat-label">Cumulative GPA</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">500+</div>
+          <div class="stat-label">Internship Hours</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">Top 10%</div>
+          <div class="stat-label">Graduating Class Rank</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">2</div>
+          <div class="stat-label">Languages Spoken</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="gold-divider"></div>
+
+
+  <!-- ═══ ABOUT ═══ -->
+  <section id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-body reveal">
+          <p class="section-label">Who I Am</p>
+          <h2 class="section-title">Analytical, Driven<br />& Community-Focused</h2>
+          <div class="section-rule"></div>
+
+          <p>
+            I am a sophomore at
+            <a href="https://ilitch.wayne.edu/" target="_blank" rel="noopener">Wayne State University's Mike Ilitch School of Business</a>,
+            pursuing a B.S. in Business Administration with a concentration in
+            Accounting. My academic path is anchored by a 3.7 GPA and Dean's List
+            recognition — reflecting a genuine commitment to excellence.
+          </p>
+          <p>
+            Beyond the classroom, I bring real-world operational experience from
+            <a href="https://www.amazon.com/" target="_blank" rel="noopener">Amazon's fulfillment network</a>,
+            where I've developed precision with data tracking, inventory management,
+            and high-volume process resolution. I believe accurate, efficient work
+            underpins every successful business — exactly the mindset I'll bring
+            to an accounting career.
+          </p>
+          <p>
+            I am bilingual in English and Bangla, holding the
+            <strong>Michigan Seal of Biliteracy</strong> in Sylheti — a unique
+            asset in Detroit's diverse business landscape.
+          </p>
+
+          <div class="lang-badges">
+            <span class="badge badge-navy">English — Fluent</span>
+            <span class="badge badge-navy">Bangla — Fluent</span>
+            <span class="badge badge-outline">Michigan Seal of Biliteracy (Sylheti)</span>
+          </div>
+        </div>
+
+        <div class="reveal" style="transition-delay:.15s;">
+          <div class="highlight-box">
+            <h4>🎯 Career Objective</h4>
+            <p>
+              Seeking an accounting internship to apply analytical
+              problem-solving, attention to detail, and financial literacy
+              developed through rigorous coursework and workforce training.
+              I aim to contribute meaningfully to an organization while
+              building the professional foundation to grow into a trusted
+              financial advisor.
+            </p>
+          </div>
+
+          <div class="highlight-box" style="margin-top:1.25rem; background:#1a3050;">
+            <h4>📊 Core Value Proposition</h4>
+            <p>
+              Employers gain a detail-oriented, self-motivated professional
+              who combines academic financial knowledge with proven operational
+              discipline — and the cultural competency to serve a diverse
+              clientele.
+            </p>
+          </div>
+
+          <div style="margin-top:1.5rem; padding:1.5rem; background:var(--warm); border-radius:10px; border:1px solid var(--border);">
+            <p class="section-label" style="margin-bottom:.5rem;">Fields of Interest</p>
+            <div class="lang-badges">
+              <span class="badge badge-gold">Public Accounting</span>
+              <span class="badge badge-outline">Financial Analysis</span>
+              <span class="badge badge-outline">Tax</span>
+              <span class="badge badge-outline">Audit</span>
+              <span class="badge badge-outline">Forensic Accounting</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ EDUCATION ═══ -->
+  <section id="education">
+    <div class="container">
+      <p class="section-label reveal">Academic Background</p>
+      <h2 class="section-title reveal">Education</h2>
+      <div class="section-rule reveal"></div>
+
+      <div class="edu-card reveal">
+        <div>
+          <p class="edu-institution">
+            <a href="https://ilitch.wayne.edu/" target="_blank" rel="noopener"
+               style="color:var(--navy); text-decoration:none;">
+              Wayne State University — Mike Ilitch School of Business
+            </a>
+          </p>
+          <p class="edu-degree">
+            Bachelor of Science in Business Administration &nbsp;·&nbsp;
+            <strong>Major: Accounting</strong> &nbsp;·&nbsp; Expected May 2028
+          </p>
+
+          <div class="edu-awards">
+            <span class="badge badge-gold">Dean's List — Fall 2025</span>
+            <span class="badge badge-navy">Gold Scholarship (2024)</span>
+            <span class="badge badge-navy">Michigan Achievement Scholarship (2024)</span>
+            <span class="badge badge-outline">Honors Dean's Award (2024)</span>
+          </div>
+
+          <p style="margin-top:1.25rem; font-size:.9rem; color:var(--muted);">
+            Wayne State's
+            <a href="https://ilitch.wayne.edu/" target="_blank" rel="noopener">Mike Ilitch School of Business</a>
+            is an AACSB-accredited institution serving the greater Detroit business
+            community. My coursework in accounting principles, financial management, and
+            business analytics directly prepares me for a career in professional services.
+          </p>
+        </div>
+
+        <div class="edu-gpa">
+          <div class="gpa-number">3.7</div>
+          <div class="gpa-label">Cumulative<br />GPA</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ SKILLS ═══ -->
+  <section id="skills">
+    <div class="container">
+      <p class="section-label reveal">What I Bring</p>
+      <h2 class="section-title reveal">Skills &amp; Competencies</h2>
+      <div class="section-rule reveal"></div>
+
+      <div class="skills-grid">
+
+        <div class="skill-card reveal">
+          <div class="skill-icon">💻</div>
+          <p class="skill-name">Technical &amp; Software</p>
+          <p class="skill-desc">
+            Proficient across the full Microsoft Office Suite — including Excel
+            for data tracking and analysis, PowerPoint for presentations, and
+            Outlook for professional correspondence. Experienced with Google
+            Workspace and warehouse hand-held data systems.
+          </p>
+        </div>
+
+        <div class="skill-card reveal" style="transition-delay:.1s;">
+          <div class="skill-icon">📈</div>
+          <p class="skill-name">Financial Literacy</p>
+          <p class="skill-desc">
+            Completed a year-long career readiness program covering personal
+            financial management, post-secondary planning, and professional
+            development through
+            <a href="https://urbanalliance.org/" target="_blank" rel="noopener">Urban Alliance</a>.
+            This foundation complements my accounting major coursework.
+          </p>
+        </div>
+
+        <div class="skill-card reveal" style="transition-delay:.2s;">
+          <div class="skill-icon">🔍</div>
+          <p class="skill-name">Research &amp; Analysis</p>
+          <p class="skill-desc">
+            Applied research methodology through the
+            <a href="https://www.michigan.gov/mdhhs" target="_blank" rel="noopener">MI Health Summer Launch Program</a>,
+            designing health studies and collecting data on community-level
+            issues. These analytical skills translate directly to accounting
+            and audit practice.
+          </p>
+        </div>
+
+        <div class="skill-card reveal" style="transition-delay:.05s;">
+          <div class="skill-icon">💬</div>
+          <p class="skill-name">Communication</p>
+          <p class="skill-desc">
+            Strong verbal and written communication sharpened through
+            professionalism training, collaborative team projects, and
+            volunteer leadership with Life Remodeled. Able to convey
+            complex information clearly across diverse audiences.
+          </p>
+        </div>
+
+        <div class="skill-card reveal" style="transition-delay:.15s;">
+          <div class="skill-icon">⚙️</div>
+          <p class="skill-name">Problem-Solving &amp; Operations</p>
+          <p class="skill-desc">
+            At Amazon, I routinely identify and resolve package fulfillment
+            discrepancies in high-volume environments — building the habit of
+            accuracy under pressure that is indispensable in accounting and audit.
+          </p>
+        </div>
+
+        <div class="skill-card reveal" style="transition-delay:.25s;">
+          <div class="skill-icon">🌐</div>
+          <p class="skill-name">Bilingual Communication</p>
+          <p class="skill-desc">
+            Fluent in English and Bangla with a
+            <strong>Michigan Seal of Biliteracy</strong> in Sylheti.
+            Michigan's Bengali-speaking community is one of the largest in the
+            Midwest; this linguistic asset supports client-facing accounting roles
+            in underserved communities.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ EXPERIENCE ═══ -->
+  <section id="experience">
+    <div class="container">
+      <p class="section-label reveal">Professional &amp; Volunteer History</p>
+      <h2 class="section-title reveal">Experience</h2>
+      <div class="section-rule reveal"></div>
+
+      <div class="timeline">
+
+        <!-- Amazon -->
+        <div class="timeline-item reveal">
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div>
+                <p class="timeline-role">Fulfillment Associate</p>
+                <p class="timeline-org">
+                  <a href="https://www.aboutamazon.com/" target="_blank" rel="noopener">
+                    Amazon — Detroit, MI
+                  </a>
+                </p>
+              </div>
+              <span class="timeline-date">Sept 2024 – Present</span>
+            </div>
+            <ul class="timeline-bullets">
+              <li>Identify and resolve damaged, missing, or mis-sorted packages to maintain order fulfillment accuracy in a high-volume warehouse environment.</li>
+              <li>Track, verify, and reroute items using hand-held scanners — building data accuracy habits directly transferable to accounting systems.</li>
+              <li>Transfer inventory across processing stations using systematic workflows, demonstrating the operational discipline required in financial record-keeping.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Urban Alliance -->
+        <div class="timeline-item reveal">
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div>
+                <p class="timeline-role">Workforce Development Program Participant</p>
+                <p class="timeline-org">
+                  <a href="https://urbanalliance.org/" target="_blank" rel="noopener">
+                    Urban Alliance — Detroit, MI
+                  </a>
+                </p>
+              </div>
+              <span class="timeline-date">Sept 2023 – June 2024</span>
+            </div>
+            <ul class="timeline-bullets">
+              <li>Completed a year-long career readiness curriculum covering Microsoft Office, professional communication, financial literacy, and post-secondary planning.</li>
+              <li>Earned a competitive nine-month paid internship placement through Urban Alliance's national workforce development pipeline.</li>
+              <li>Contributed over 500 hours of on-the-job professional experience with structured mentorship — the equivalent of a full-time semester of real-world learning.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Life Remodeled -->
+        <div class="timeline-item reveal">
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div>
+                <p class="timeline-role">Student Intern</p>
+                <p class="timeline-org">
+                  <a href="https://liferemodeled.com/" target="_blank" rel="noopener">
+                    Life Remodeled — Detroit, MI
+                  </a>
+                </p>
+              </div>
+              <span class="timeline-date">Dec 2023 – May 2024</span>
+            </div>
+            <ul class="timeline-bullets">
+              <li>Assisted in planning and coordinating community events — developing project management and logistics skills in a nonprofit context.</li>
+              <li>Collaborated cross-functionally with team members to deliver well-executed neighborhood engagement initiatives with measurable community impact.</li>
+              <li>Supported youth programming, guiding children through structured creative activities and demonstrating the patience and mentorship skills valued in any client-service profession.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- MI Health -->
+        <div class="timeline-item reveal">
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div>
+                <p class="timeline-role">Health Research Student</p>
+                <p class="timeline-org">
+                  <a href="https://www.michigan.gov/mdhhs" target="_blank" rel="noopener">
+                    MI Health Summer Launch Program — Virtual
+                  </a>
+                </p>
+              </div>
+              <span class="timeline-date">July 2024 – Aug 2024</span>
+            </div>
+            <ul class="timeline-bullets">
+              <li>Designed and conducted health research studies, applying fundamentals of study design and data collection to real-world community health issues.</li>
+              <li>Developed research methodology skills — including hypothesis formation, data gathering, and result interpretation — directly applicable to accounting and audit analysis.</li>
+              <li>Collaborated with peers and faculty mentors in a virtual academic environment, refining written communication and remote teamwork proficiencies.</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ HONORS ═══ -->
+  <section id="honors">
+    <div class="container">
+      <p class="section-label reveal">Recognition</p>
+      <h2 class="section-title reveal">Honors &amp; Awards</h2>
+      <div class="section-rule reveal"></div>
+
+      <div class="honors-grid">
+        <div class="honor-card reveal">
+          <div class="honor-medal">🏅</div>
+          <div>
+            <p class="honor-title">Award of Achievement for Academic Excellence</p>
+            <p class="honor-body">
+              Ranked within the <strong>top 10%</strong> of the graduating senior class,
+              <a href="https://www.detroitk12.org/" target="_blank" rel="noopener">Detroit Public Schools</a>
+              — May 2024.
+            </p>
+          </div>
+        </div>
+
+        <div class="honor-card reveal" style="transition-delay:.1s;">
+          <div class="honor-medal">🥇</div>
+          <div>
+            <p class="honor-title">1st Place — STEM Competition</p>
+            <p class="honor-body">
+              Built a fully functional 3-D printed prosthetic dog leg — demonstrating
+              cross-disciplinary creative and technical problem-solving. February 2023.
+            </p>
+          </div>
+        </div>
+
+        <div class="honor-card reveal" style="transition-delay:.05s;">
+          <div class="honor-medal">📚</div>
+          <div>
+            <p class="honor-title">Dean's List — Fall 2025</p>
+            <p class="honor-body">
+              Recognized for outstanding academic performance at
+              <a href="https://ilitch.wayne.edu/" target="_blank" rel="noopener">Wayne State University's Mike Ilitch School of Business</a>.
+            </p>
+          </div>
+        </div>
+
+        <div class="honor-card reveal" style="transition-delay:.15s;">
+          <div class="honor-medal">🌐</div>
+          <div>
+            <p class="honor-title">Michigan Seal of Biliteracy — Sylheti</p>
+            <p class="honor-body">
+              State-recognized certification of bilingual proficiency in English
+              and Bangla (Sylheti dialect), attesting to professional-level
+              written and oral communication in both languages.
+            </p>
+          </div>
+        </div>
+
+        <div class="honor-card reveal" style="transition-delay:.1s;">
+          <div class="honor-medal">🎓</div>
+          <div>
+            <p class="honor-title">Gold Scholarship &amp; Michigan Achievement Scholarship</p>
+            <p class="honor-body">
+              Awarded merit-based scholarships in 2024 in recognition of academic
+              achievement and community engagement at Wayne State University.
+            </p>
+          </div>
+        </div>
+
+        <div class="honor-card reveal" style="transition-delay:.2s;">
+          <div class="honor-medal">✅</div>
+          <div>
+            <p class="honor-title">Perfect Attendance — Detroit International Academy</p>
+            <p class="honor-body">
+              Recognized for uninterrupted academic attendance through May 2024,
+              reflecting the reliability and consistency that defines professional
+              excellence.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ FOOTER ═══ -->
+  <div class="gold-divider"></div>
+  <footer>
+    <p style="font-family:var(--serif); font-size:1rem; color:rgba(255,255,255,.7); margin-bottom:.5rem;">
+      Shamme Begum &nbsp;·&nbsp; Accounting Student, Wayne State University
+    </p>
+    <p>
+      <a href="mailto:hw2160@wayne.edu">hw2160@wayne.edu</a>
+      &nbsp;·&nbsp;
+      <a href="tel:+13134197960">(313) 419-7960</a>
+      &nbsp;·&nbsp;
+      <a href="https://linkedin.com/in/shamme-begum-86591829b" target="_blank" rel="noopener">LinkedIn Profile</a>
+    </p>
+    <p style="margin-top:1rem; font-size:.78rem;">
+      Detroit, MI &nbsp;·&nbsp; &copy; 2025 Shamme Begum &nbsp;·&nbsp; All Rights Reserved
+    </p>
+  </footer>
+
+
+  <!-- ═══ SCROLL REVEAL JS ═══ -->
+  <script>
+    // Intersection observer for .reveal elements
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry, i) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12 }
+    );
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // Active nav link highlighting
+    const sections = document.querySelectorAll('section[id], header[id]');
+    const navLinks = document.querySelectorAll('.nav-links a');
+
+    const navObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          navLinks.forEach(link => {
+            link.style.color = link.getAttribute('href') === `#${entry.target.id}`
+              ? 'var(--gold)' : '';
+          });
+        }
+      });
+    }, { threshold: 0.4 });
+
+    sections.forEach(s => navObserver.observe(s));
+  </script>
+</body>
+</html>
